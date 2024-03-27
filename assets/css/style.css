@@ -10,16 +10,13 @@ body {
 header {
   background-color: #fef7e2;
   padding-block: 1rem;
+  position: sticky;
+  top: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  padding-inline: 10px;
-  gap: 10px;
-}
 
-.header-section {
+
+nav button {
     padding-block: 0.7rem;
     padding-inline: 1rem;
     border-radius: 30px;
@@ -34,6 +31,15 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-inline: 10px;
+  gap: 5px;
 }
 
 button img {
@@ -46,6 +52,7 @@ main {
 
 span {
   font-size: 20px;
+
 }
 
 h1 {
@@ -89,7 +96,7 @@ h1 {
   text-align: center;
 }
 
-main button {
+#button-card {
   margin-bottom: 0.5rem;
   padding-inline: 2rem;
   padding-block: 0.7rem;
@@ -155,6 +162,11 @@ h2 {
   .latest {
     text-align: start;
   }
+  header {
+    border-radius: 150px;
+    padding: 30px;
+    margin: 20px 10px;
+  }
   nav {
     flex-wrap: wrap;
     gap: unset;
@@ -162,11 +174,12 @@ h2 {
 }
   #shop {
     order: -1;
-    width: 80%;
+    width: 100%;
   }
 
-  nav button {
-    width: 40%;
+  .header-section {
+    width: 50%;
+    padding-inline: unset;
   }
 }
 
@@ -180,22 +193,32 @@ h2 {
   body {
     display: flex;
   }
+  
+  header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+min-height: 100%;    z-index: 1000; 
+  }
 
-
-  header button {
-    width: 100%;
-}
   nav {
     flex-direction: column;
     justify-content: center;
     align-items: start;
     #shop {
       order: -1;
+      width: 100%;
     }
   }
 
   .header-section {
     padding-block: 2rem;
+    width: 100%;
+  }
+
+  main {
+    margin-left: 200px;
   }
 
   .container {
